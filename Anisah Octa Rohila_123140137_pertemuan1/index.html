@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Panes' Task Tracker - Mahasiswa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <h1 class="brand">Panes' Task Tracker</h1>
+      <div class="top-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme" title="Toggle theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="stats-row">
+        <div class="stat card">
+          <div class="stat-icon">
+            <svg width="28" height="40" viewBox="0 0 24 24" fill="none"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="stat-body">
+            <div class="muted">Total Tugas</div>
+            <div id="totalCount" class="stat-value">0</div>
+          </div>
+        </div>
+
+        <div class="stat card">
+          <div class="stat-icon">
+            <svg width="28" height="40" viewBox="0 0 24 24" fill="none"><path d="M12 8v5l3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/></svg>
+          </div>
+          <div class="stat-body">
+            <div class="muted">Belum Selesai</div>
+            <div id="pendingCount" class="stat-value">0</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel card add-panel" aria-labelledby="add-heading">
+        <div class="panel-header">
+          <h2 id="add-heading" class="panel-title">+ Tambah Tugas Baru</h2>
+        </div>
+        <form id="taskForm" class="form">
+          <label class="label">Nama Tugas <span class="required">*</span></label>
+          <input id="titleInput" type="text" required>
+
+          <label class="label">Mata Kuliah <span class="required">*</span></label>
+          <input id="courseInput" type="text">
+
+          <label class="label">Deadline</label>
+          <input id="deadlineInput" type="date">
+
+          <div id="formError" class="form-error" role="alert" aria-live="polite"></div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary full">+ Tambah Tugas</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel card controls">
+        <div class="filters">
+          <button class="btn filter active" data-filter="all">Semua</button>
+          <button class="btn filter" data-filter="pending">Belum Selesai</button>
+          <button class="btn filter" data-filter="completed">Selesai</button>
+        </div>
+        <div class="search">
+          <input id="searchInput" type="text" placeholder="Cari berdasarkan mata kuliah atau judul...">
+        </div>
+      </section>
+
+      <section class="panel card tasks-panel">
+        <div id="taskList" class="task-list" aria-live="polite"></div>
+
+        <div id="emptyState" class="empty-state">
+          <div class="empty-ico">😁</div>
+          <h3>Tidak Ada Tugas</h3>
+          <p>Belum ada tugas yang ditambahkan. Tambahkan tugas pertama Anda di atas!</p>
+        </div>
+      </section>
+
+      <footer class="footer muted">made by Anisah Octa Rohila (123140137)</footer>
+    </main>
+  </div>
+
+  <div id="modalBackdrop" class="modal-backdrop" aria-hidden="true">
+    <div class="modal card" role="dialog" aria-modal="true" aria-labelledby="editHeading">
+      <h3 id="editHeading">Edit Tugas</h3>
+      <form id="editForm" class="form">
+        <label class="label">Nama Tugas <span class="required">*</span></label>
+        <input id="editTitle" type="text" required>
+
+        <label class="label">Mata Kuliah</label>
+        <input id="editCourse" type="text">
+
+        <label class="label">Deadline</label>
+        <input id="editDeadline" type="date">
+
+        <div id="editError" class="form-error" role="alert" aria-live="polite"></div>
+
+        <div class="form-actions">
+          <button type="button" id="cancelEdit" class="btn">Batal</button>
+          <button type="submit" class="btn primary">Simpan</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
