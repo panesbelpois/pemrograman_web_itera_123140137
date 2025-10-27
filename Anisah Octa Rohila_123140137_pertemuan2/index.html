@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Personal Dashboard</title>
+
+  <!-- Tambahkan font Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div>
+        <h1>Panes' Dashboard</h1>
+        <p class="sub">Your pinkie dashboard to track your schedule</p>
+      </div>
+      <div class="timebox">
+        <div class="clock" id="clock">--:--:--</div>
+        <div class="date" id="date">Senin, -- ---- ----</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Kolom kiri: Tugas & Jadwal -->
+    <div class="left-column">
+      <section class="card tasks-card">
+        <div class="card-header">
+          <h3>Daftar Tugas <span class="badge" id="active-count">0 Aktif</span></h3>
+        </div>
+        <div class="card-body">
+          <ul id="task-list" class="task-list"></ul>
+
+          <div class="task-add">
+            <input id="task-title" placeholder="Tambah tugas baru..." />
+            <select id="task-status">
+              <option value="Sedang">Sedang</option>
+              <option value="Selesai">Selesai</option>
+              <option value="Pending">Pending</option>
+            </select>
+            <input id="task-deadline" type="date" />
+            <button id="task-add-btn" class="btn btn-pink">+ Tambah</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="card schedule-card">
+        <div class="card-header">
+          <h3>Jadwal Kuliah</h3>
+          <button id="open-schedule-modal" class="btn btn-pink small">+ Tambah</button>
+        </div>
+        <div class="card-body card-empty" id="schedule-area">
+          <p>Belum ada jadwal. Tambahkan jadwal kuliah Anda!</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Kolom kanan: Catatan + GIF -->
+    <div class="right-column">
+      <section class="card notes-card">
+        <div class="card-header">
+          <h3>Catatan</h3>
+          <button id="open-note-modal" class="btn btn-pink small">+ Baru</button>
+        </div>
+        <div class="card-body card-empty" id="notes-area">
+          <p>Belum ada catatan. Buat catatan pertama Anda!</p>
+        </div>
+      </section>
+
+      <div class="gif-box">
+        <img src="assets/asset.gif" alt="gif" />
+      </div>
+    </div>
+  </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <small>Made by Anisah Octa Rohila (123140137)</small>
+      </div>
+    </footer>
+
+  <!-- Modal Note -->
+  <div id="note-modal" class="modal hidden">
+    <div class="modal-content">
+      <button class="modal-close" data-close>&times;</button>
+      <h4>Catatan Baru</h4>
+      <input id="note-title" placeholder="Judul catatan..." />
+      <textarea id="note-body" placeholder="Tulis catatan Anda di sini..."></textarea>
+      <div class="modal-actions">
+        <button class="btn" data-close>Batal</button>
+        <button id="note-save-btn" class="btn btn-pink">Tambah</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Jadwal -->
+  <div id="schedule-modal" class="modal hidden">
+    <div class="modal-content">
+      <button class="modal-close" data-close>&times;</button>
+      <h4>Jadwal Baru</h4>
+      <input id="sched-title" placeholder="Nama mata kuliah..." />
+      <select id="sched-day">
+        <option>Senin</option><option>Selasa</option><option>Rabu</option>
+        <option>Kamis</option><option>Jumat</option><option>Sabtu</option><option>Minggu</option>
+      </select>
+      <div class="time-row">
+        <label>Waktu Mulai</label>
+        <input id="sched-start" type="time" />
+        <label>Waktu Selesai</label>
+        <input id="sched-end" type="time" />
+      </div>
+      <input id="sched-loc" placeholder="Lokasi/Ruangan (opsional)" />
+      <div class="modal-actions">
+        <button class="btn" data-close>Batal</button>
+        <button id="sched-save-btn" class="btn btn-pink">Tambah</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
