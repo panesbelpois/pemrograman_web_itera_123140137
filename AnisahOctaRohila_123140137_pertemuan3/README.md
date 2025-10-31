@@ -29,17 +29,17 @@ Tampilan awal aplikasi ketika koleksi buku masih kosong.
 
 ![Tampilan Utama Kosong](src/assets/ss1.png)
 
-### SS2: Tampilan Menambahkan Buku
+### Tampilan Menambahkan Buku
 Formulir modal yang muncul saat pengguna menekan tombol `+` untuk menambahkan buku baru.
 
 ![Tampilan Menambahkan Buku](src/assets/ss2.png)
 
-### SS3: Tampilan Saat Buku Sudah Ditambahkan
+### Tampilan Saat Buku Sudah Ditambahkan
 Tampilan utama setelah beberapa buku ditambahkan ke dalam koleksi, ditampilkan dalam format kartu.
 
 ![Tampilan Daftar Buku](src/assets/ss3.png)
 
-### SS4: Tampilan Statistik Buku
+### Tampilan Statistik Buku
 Halaman statistik yang menunjukkan rekapitulasi koleksi buku (catatan: fungsionalitas ini mungkin masih dalam pengembangan).
 
 ![Tampilan Statistik](src/assets/ss4.png)
