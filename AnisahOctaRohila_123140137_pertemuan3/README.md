@@ -15,7 +15,7 @@ Aplikasi ini menyediakan antarmuka yang bersih dan sederhana untuk manajemen buk
 
 ### Fitur Utama
 * **Manajemen Buku (CRUD):** Pengguna dapat **Menambah** buku baru, **Melihat** (Read) daftar buku, **Memperbarui** (Update) detail buku, dan **Menghapus** (Delete) buku dari koleksi.
-* **Filter Buku:** Buku dapat difilter berdasarkan statusnya: "Semua Buku", "Milik Saya", "Sedang Dibaca", dan "Ingin Dibeli".
+* **Filter Buku:** Buku dapat difilter berdasarkan statusnya: "Semua Buku", "Sedang Dibaca", dan "Ingin Dibeli".
 * **Navigasi Halaman:** Aplikasi ini memiliki dua halaman utama: "Buku Saya" (halaman utama) dan "Statistik", yang dapat diakses melalui `Navbar`.
 * **State Management:** Menggunakan React Context API (`BookProvider`) untuk mengelola daftar buku secara global, sehingga semua komponen memiliki akses ke data yang konsisten.
 * **Antarmuka Responsif (Dasar):** Didesain dengan komponen modern seperti modal (untuk form) dan *floating action button* (untuk menambah buku).
