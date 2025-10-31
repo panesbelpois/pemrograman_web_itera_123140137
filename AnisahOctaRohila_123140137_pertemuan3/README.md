@@ -1,4 +1,4 @@
-# PaneShelf (my-bukuku-app)
+# PaneShelf
 
 [![Lisensi: MIT](https://img.shields.io/badge/Lisensi-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![React](https://img.shields.io/badge/React-18.2.0-blue?logo=react)](https://reactjs.org/)
