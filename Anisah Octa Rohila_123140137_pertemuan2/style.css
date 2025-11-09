@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root{
   --pink-1: #ff2f7e;
   --pink-2: #ff6fa5;
@@ -495,3 +496,502 @@ main.container {
   border-radius: 12px;
 }
 
+=======
+:root{
+  --pink-1: #ff2f7e;
+  --pink-2: #ff6fa5;
+  --soft-pink: #ff4b8f;
+  --light-bg: #fbf7f9;
+  --card-bg: #fff;
+  --muted: #8b8b8b;
+  --shadow: 0 8px 18px rgba(0,0,0,0.08);
+  --round: 12px;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background: #f7f6f8;
+  color:#222;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* HERO */
+.hero{
+  background: linear-gradient(90deg,var(--pink-1),var(--pink-2));
+  color: white;
+  padding:32px;
+  border-radius:12px;
+  margin:24px;
+  box-shadow: var(--shadow);
+}
+.hero-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  width:100%;
+}
+.hero h1{
+  margin:0;
+  font-size:36px;
+  font-weight:800;
+  letter-spacing:0.2px;
+}
+.hero .sub{
+  margin:6px 0 0 0;
+  opacity:0.95;
+}
+
+/* CLOCK BOX */
+.timebox{
+  text-align:right;
+}
+.clock{
+  font-weight:700;
+  font-size:20px;
+}
+.date{
+  font-size:13px;
+  opacity:0.9;
+}
+
+/* LAYOUT */
+.container{
+  display:grid;
+  grid-template-columns: 1fr 360px;
+  gap:24px;
+  margin:24px;
+  max-width:1200px;
+}
+
+/* CARD */
+.card{
+  width:100%;
+  background:var(--card-bg);
+  border-radius:12px;
+  box-shadow: var(--shadow);
+  padding:18px;
+  overflow:hidden;
+}
+.card-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:12px;
+}
+.card-header h3{
+  margin:0;
+  display:flex;
+  gap:12px;
+  align-items:center;
+  font-size:18px;
+}
+.badge{
+  background:#f6eef3;
+  color:var(--pink-1);
+  padding:4px 8px;
+  border-radius:8px;
+  font-size:12px;
+}
+
+/* TASKS */
+.tasks-card{grid-column:1 / 2;}
+.task-list{list-style:none;padding:0;margin:0 0 12px 0}
+.task-item{
+  border:1px solid #f0dfe6;
+  padding:12px;
+  border-radius:8px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:8px;
+}
+.task-left{display:flex;gap:12px;align-items:center}
+.status-pill{
+  background:#fff1f6;
+  color:var(--pink-1);
+  padding:6px 8px;border-radius:10px;font-size:12px;
+}
+.task-add{display:flex;gap:8px;align-items:center;margin-top:8px}
+.task-add input, .task-add select, .task-add input[type="date"]{
+  padding:10px;border-radius:8px;border:1px solid #f0d0e0;flex:1;
+}
+
+/* SCHEDULE & NOTES */
+.schedule-card{grid-row:1 / span 1;}
+.card-empty{min-height:120px;display:flex;align-items:center;justify-content:center;color:var(--muted);}
+
+/* NOTES */
+.notes-card{grid-column:1 / -1;}
+
+/* BUTTONS */
+.btn{padding:8px 14px;border-radius:8px;border:1px solid #eee;background:white;cursor:pointer}
+.btn.small{padding:6px 10px}
+.btn-pink{
+  background:linear-gradient(180deg,var(--soft-pink),var(--pink-1));
+  color:white;border:none;font-weight:700;
+  box-shadow: 0 6px 12px rgba(255,75,143,0.18);
+}
+.btn:active{transform:translateY(1px)}
+
+/* MODAL */
+.modal{
+  position:fixed;inset:0;background:rgba(0,0,0,0.55);display:flex;align-items:center;justify-content:center;
+  z-index:40;padding:20px;
+}
+.hidden{display:none}
+.modal-content{
+  background:white;padding:18px;border-radius:10px;min-width:420px;max-width:720px;box-shadow:0 20px 50px rgba(0,0,0,0.4);
+  position:relative;
+}
+.modal-close{position:absolute;right:12px;top:8px;border:none;background:transparent;font-size:20px;cursor:pointer}
+.modal-content h4{margin:0 0 12px 0;}
+.modal-content input, .modal-content textarea, .modal-content select{
+  width:100%;padding:10px;border-radius:8px;border:1px solid #f0d0e0;margin-bottom:12px;
+}
+.modal-content textarea{height:130px;resize:vertical}
+.modal-actions{display:flex;justify-content:flex-end;gap:8px}
+
+/* small responsive tweak */
+@media (max-width:920px){
+  .container{grid-template-columns:1fr; padding:0 16px}
+  .hero{margin:16px}
+}
+
+/* FONT UPDATE */
+:root {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Layout grid dua kolom utama */
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  margin: 24px;
+  max-width: 1200px;
+}
+
+/* Kolom kanan (catatan + gif) */
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.gif-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gif-box img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+/* Efek teks tugas kalau selesai */
+.task-item.done .task-left div:first-child {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Responsive */
+@media (max-width: 920px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .gif-box img {
+    max-width: 220px;
+  }
+}
+
+/* === GLOBAL === */
+:root {
+  font-family: 'Poppins', sans-serif;
+  --pink: #ff4fa3;
+  --light-pink: #ff7eb8;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  --bg: #faf9fb;
+}
+
+body {
+  background: var(--bg);
+  margin: 0;
+  padding: 0;
+}
+
+/* === HEADER === */
+.hero {
+  background: linear-gradient(90deg, var(--pink), var(--light-pink));
+  color: white;
+  padding: 14px 28px;
+  border-radius: 12px;
+  margin: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+.hero .sub {
+  font-size: 0.9rem;
+  margin: 0;
+  opacity: 0.9;
+}
+.timebox {
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 20px;
+}
+
+
+/* === CARD === */
+.card {
+  background: white;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 14px 18px;
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.card-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+.card-body {
+  font-size: 0.9rem;
+}
+
+/* === LIST === */
+.task-item {
+  background: #fff;
+  border: 1px solid #f2f2f2;
+  border-radius: 10px;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  transition: all 0.2s ease;
+}
+.task-item:hover {
+  background: #fff7fb;
+}
+.task-item.done .task-left div:first-child {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+/* === FORM TUGAS === */
+.task-add {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+.task-add input,
+.task-add select {
+  flex: 1;
+  border: 1px solid #f0cfe0;
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-size: 0.85rem;
+}
+.task-add .btn {
+  padding: 6px 10px;
+}
+
+/* === BUTTON === */
+.btn {
+  background: #eee;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: 0.2s;
+}
+.btn:hover {
+  transform: scale(1.03);
+}
+.btn-pink {
+  background: var(--pink);
+  color: white;
+  box-shadow: 0 3px 6px rgba(255, 79, 163, 0.3);
+}
+.btn-pink:hover {
+  background: var(--light-pink);
+}
+
+/* === GRID DALAM KIRI DAN KANAN === */
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  /* allow right column to grow to fill available height */
+  flex: 1 1 auto;
+}
+
+/* === GIF === */
+.gif-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  /* match card inner padding so GIF lines up horizontally with notes */
+  padding: 14px 18px;
+  /* let the gif-box grow to match the right column height */
+  flex: 1 1 auto;
+  min-height: 0; /* allow children to control overflowing */
+}
+.gif-box img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  border-radius: 10px;
+  object-fit: cover; /* fill the box while preserving aspect */
+  transition: transform 0.3s ease;
+}
+.gif-box img:hover {
+  transform: scale(1.03);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .gif-box img {
+    max-width: 200px;
+  }
+}
+
+/* === Responsive tweaks added: make header stack & keep clock at right on narrow screens === */
+.timebox{
+  text-align:right;
+  margin-left:auto; /* keep it pushed to right in flex row */
+}
+
+@media (max-width: 680px){
+  /* Stack hero items vertically on small screens */
+  .hero-inner{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:8px;
+  }
+  /* Keep clock visually to the right within the stacked header */
+  .timebox{
+    align-self:flex-end;
+    width:100%;
+    text-align:right;
+  }
+
+  /* Make the task-add controls wrap into a column for small screens */
+  .task-add{
+    flex-direction:column;
+    align-items:stretch;
+    gap:8px;
+  }
+  .task-add input,
+  .task-add select,
+  .task-add input[type="date"],
+  .task-add .btn{
+    width:100%;
+  }
+
+  /* Slightly reduce card/header paddings for smaller screens */
+  .card{ padding:12px; }
+  .hero{ padding:12px; margin:12px; }
+  .container{ margin:12px; padding:12px; }
+}
+
+/* === Make main content fill the viewport vertically === */
+/* Subtract an approximate header height; adjust 120px if your header is taller */
+main.container {
+  min-height: calc(100vh - 120px);
+  display: grid; /* keep grid behaviour */
+  align-items: stretch;
+}
+
+/* Ensure left and right columns take full available height */
+.left-column, .right-column {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make primary cards stretch vertically and make body scrollable if content overflows */
+.tasks-card, .schedule-card, .notes-card {
+  display: flex;
+  flex-direction: column;
+}
+.tasks-card .card-body, .schedule-card .card-body, .notes-card .card-body {
+  flex: 1 1 auto;
+  overflow: auto;
+}
+
+/* Small visual tweak: make gif-box not force extra height */
+.gif-box { align-self: flex-start; }
+
+/* === Footer styling === */
+.site-footer{
+  text-align:center;
+  padding:14px 18px;
+  /* faded, not fully black */
+  color: rgba(0,0,0,0.45);
+  font-size:0.95rem;
+  margin-top:12px;
+  /* ensure Poppins and slightly lighter weight for a soft look */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+.site-footer .footer-inner{ max-width:1200px; margin:0 auto; }
+
+/* === Make left/right column children share vertical space equally so schedule-card matches gif height === */
+.left-column > .tasks-card,
+.left-column > .schedule-card {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+}
+.right-column > .notes-card,
+.right-column > .gif-box {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make gif fill its box */
+.gif-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+>>>>>>> 9a07591e8e78ae092e6156f915e9ff02f9a92511
