@@ -1,0 +1,109 @@
+{
+  "info": {
+    "name": "Matakuliah API Collection",
+    "description": "API untuk manajemen matakuliah dengan Pyramid Framework",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Matakuliah",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:6543/api/matakuliah",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "6543",
+          "path": ["api", "matakuliah"]
+        },
+        "description": "Mendapatkan semua data matakuliah"
+      },
+      "response": []
+    },
+    {
+      "name": "Get Matakuliah by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:6543/api/matakuliah/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "6543",
+          "path": ["api", "matakuliah", "1"]
+        },
+        "description": "Mendapatkan detail satu matakuliah berdasarkan ID"
+      },
+      "response": []
+    },
+    {
+      "name": "Create Matakuliah",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"kode_mk\": \"IF201\",\n  \"nama_mk\": \"Jaringan Komputer\",\n  \"sks\": 3,\n  \"semester\": 5\n}"
+        },
+        "url": {
+          "raw": "http://localhost:6543/api/matakuliah",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "6543",
+          "path": ["api", "matakuliah"]
+        },
+        "description": "Menambahkan matakuliah baru"
+      },
+      "response": []
+    },
+    {
+      "name": "Update Matakuliah",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nama_mk\": \"Algoritma dan Pemrograman Lanjut\",\n  \"sks\": 4\n}"
+        },
+        "url": {
+          "raw": "http://localhost:6543/api/matakuliah/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "6543",
+          "path": ["api", "matakuliah", "1"]
+        },
+        "description": "Mengupdate data matakuliah"
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Matakuliah",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:6543/api/matakuliah/6",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "6543",
+          "path": ["api", "matakuliah", "6"]
+        },
+        "description": "Menghapus data matakuliah"
+      },
+      "response": []
+    }
+  ]
+}
